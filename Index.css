@@ -129,6 +129,29 @@ width: 3vh;;
   align-items: center;
   justify-content: center;
 }
+.activiteitenDiv{
+    display: flex;
+    justify-content: center;
+    flex: start;
+    gap: 3%;
+    
+}
+.contactText{
+    color: white;
+}
+.zoom-foto {
+  transition: transform 0.25s ease; /* Zorgt voor een soepele animatie */
+  cursor: zoom-in;
+  height: 20vh;
+  width: 20vw;
+}
+
+.zoom-foto:active {
+  transform: scale(2); /* Maakt de foto 2x zo groot */
+  cursor: zoom-out;
+  position: relative;
+  z-index: 999; /* Zorgt dat de foto over andere elementen heen komt */
+}
 
 @media (max-width: 768px) {
     .logo{
@@ -175,6 +198,12 @@ width: 3vh;;
         align-items: center;
         padding: 20px;
         text-align: left;
+    }
+    .activiteitenDiv{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2;
     }
 }
 
@@ -233,5 +262,12 @@ width: 3vh;;
     .div2, .div3{
         max-width: 100%;
         align-items: center;
+    }
+    .activiteitenDiv{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2;
+
     }
 }
