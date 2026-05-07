@@ -28,7 +28,7 @@ nav{
  display: flex;
  align-items: center;
  gap: 2vw;
- font-size:larger;
+ font-size:1vw;
  font-weight: bold; color: #000;
  margin: 1vh;
 }
@@ -54,7 +54,6 @@ footer{
     color: aliceblue;
     display: flex;
     width: 100vw;
-    height: 17vh;
     flex-direction: row;
     justify-content: space-evenly;
     bottom: 0;
@@ -132,9 +131,9 @@ width: 3vh;;
 .activiteitenDiv{
     display: flex;
     justify-content: center;
-    flex: start;
+    flex-direction: row; /* blijft rij op desktop */
     gap: 3%;
-    
+    align-items: center;
 }
 .contactText{
     color: white;
@@ -147,10 +146,10 @@ width: 3vh;;
 }
 
 .zoom-foto:active {
-  transform: scale(2); /* Maakt de foto 2x zo groot */
+  transform: scale(2);
   cursor: zoom-out;
   position: relative;
-  z-index: 999; /* Zorgt dat de foto over andere elementen heen komt */
+  z-index: 999; 
 }
 
 @media (max-width: 768px) {
@@ -187,7 +186,7 @@ width: 3vh;;
         padding: 0 20px;
     }
 
-    .image1{
+    .zoom-foto{
         height: 15vh;
         width: 40vw;
     }
@@ -200,15 +199,18 @@ width: 3vh;;
         text-align: left;
     }
     .activiteitenDiv{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* ← dit centreert de foto's */
+    justify-content: center;
+    gap: 16px;
+    width: 50%;
+    height: auto;
     }
 }
 
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
     .logo{
         width: 30vw;
     }
@@ -218,7 +220,7 @@ width: 3vh;;
         gap: 8px;
     }
     .hero{
-        width: 100vw;
+        width: 110%;
     }
 
     nav {
@@ -239,7 +241,7 @@ width: 3vh;;
         align-items: center;
     }
 
-    .image1{
+    .zoom-foto{
         height: 25vh;
         width: 80vw;
     }
@@ -256,7 +258,6 @@ width: 3vh;;
         gap: 20px;
         padding: 20px;
         height: 50%;
-        width: 90%;
     }
 
     .div2, .div3{
@@ -264,10 +265,16 @@ width: 3vh;;
         align-items: center;
     }
     .activiteitenDiv{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 2;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    width: 100%;
+    height: auto;
+    }
+    .activiteitenDiv .zoom-foto {
+        height: 25vh;
+        width: 80vw;
     }
 }
